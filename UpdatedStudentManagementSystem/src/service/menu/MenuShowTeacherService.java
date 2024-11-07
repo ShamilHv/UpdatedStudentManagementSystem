@@ -1,0 +1,17 @@
+package service.menu;
+
+import bean.Config;
+import bean.Teacher;
+import service.inter.menu.MenuShowTeacherServiceInter;
+
+public class MenuShowTeacherService implements MenuShowTeacherServiceInter {
+    @Override
+    public void processLogic() {
+
+        Teacher[] allTeachers= Config.getInstance().getTeachers();
+        for(int i=0;i<allTeachers.length;i++){
+            System.out.println(allTeachers[i]);
+        }
+
+    }
+}
